@@ -8,6 +8,19 @@
     <title>Jogo da Velha</title>
 </head>
 <body>
+    <div class="flex">
+    <div class="scoreboard">
+        <h2>Pontos do O</h2>
+        <h2 id="ball">0</h2>
+    </div>
+    <div>
+        <h1>Jogo da Velha</h1>
+    </div>
+    <div class="scoreboard">
+        <h2>Pontos do X</h2>
+        <h2 id="X">0</h2>
+    </div>
+</div>
     <div class="stage">
         <div>
             <div id="0" class="square"></div>
@@ -18,16 +31,17 @@
             <div id="3" class="square"></div>
             <div id="4" class="square"></div>
             <div id="5" class="square">
-                <div class="X"></div>
             </div>
         </div>
         <div>
-            <div id="6" class="square">
-                <div class="o"></div>
-            </div>
+            <div id="6" class="square"></div>
             <div id="7" class="square"></div>
             <div id="8" class="square"></div>
         </div>
+    </div>
+
+    <div>
+        <input class="restart" type="button" onclick="restart()" value="Restart">
     </div>
 
 <script src="game.js"></script>

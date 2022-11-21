@@ -44,3 +44,37 @@ body{
     right: 0;
 
 }
+
+.restart{
+    board: 2px solid black;
+    background-color: blueviolet;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 200px;
+    color: white
+}
+.restart:active{
+    board: 2px solid blueviolet;
+    background-color: black;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 200px;
+    color: white
+}
+.flex{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+}
+.scoreboard{
+    text-align: center;
+
+}
+#ball{
+    text-align: center;
+}
+#X{
+    text-align: center;
+}
