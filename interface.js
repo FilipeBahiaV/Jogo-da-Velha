@@ -10,20 +10,41 @@ function handleClick(event){
     let square = event.target;
     let position = square.id;
 
-    handleMove(position);
-    updateSquares();
+    if(handleMove(position)){
+        setTimeout(() => {
+            alert("O jogo Acabou");
+        }, 10);
+        
+    };
+    updateSquare(position);
 }
 
+function updateSquare(position){
+    let square = document.getElementById(position.toString());
+    let symbol = board[position]; 
+    square.innerHTML = `<div class='${symbol}'></div>`
+}
 
 function updateSquares(){
     let squares = document.querySelectorAll(".square");
 
-    squares.forEach((square) => {
-        let position = square.id;
-        let symbol = board[position];
+    squares.forEach((square) =>{
+    let position = square.id;
+    let symbol = board[position]; 
+    square.innerHTML = `<div class='${symbol}'></div>`
+    }
+    )
 
-        if(symbol != ''){
-            square.innerHTML = `<div class='${symbol}'></div>`
-        }
-    })
+
+}
+
+
+function restart(){
+    board = ["", "", "", "", "", "", "", "", ""];
+    playerTime = 0;
+    gameOver = false;
+    document.getElementById("ball").innerHTML = `${Winners[0]}`;
+    document.getElementById("X").innerHTML = `${Winners[1]}`;
+    updateSquares();
+    console.log(Winners);
 }
